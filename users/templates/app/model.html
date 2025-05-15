@@ -1,0 +1,597 @@
+{% extends 'users/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Churn</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  <title>Document</title>
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  input,
+  textarea {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+  }
+  
+  .container1 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #fafafa;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 920px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    display: grid;
+    font-size: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  
+  .contact-form {
+    background-color: #af1111;
+    position: relative;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    background: linear-gradient(135deg, transparent 20%, #af1111);
+    position: absolute;
+  }
+  
+  .circle.one {
+    width: 130px;
+    height: 130px;
+    top: 130px;
+    right: -40px;
+  }
+  
+  .circle.two {
+    width: 80px;
+    height: 80px;
+    top: 10px;
+    right: 30px;
+  }
+  
+  .contact-form:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #af1111;
+    transform: rotate(45deg);
+    top: 50px;
+    left: -13px;
+  }
+  
+  form {
+    padding: 2.3rem 2.2rem;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+  }
+  
+  .input-container1 {
+    position: relative;
+    margin: 1rem 0;
+    
+    
+  }
+  
+  .input {
+    width: 100%;
+    outline: none;
+    border: 2px solid #fafafa;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  textarea.input {
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 5px;
+    resize: none;
+    overflow-y: auto;
+    
+    
+  }
+  
+  .input-container1 label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: #fafafa;
+    font-size: 1.4rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+  }
+  
+  .input-container1.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+    font-size: 20px;
+    
+  }
+  
+  .btn {
+    padding: 0.6rem 1.3rem;
+    background-color: #ac0000;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: #700000;
+    line-height: 1;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  .btn:hover {
+    background-color: rgb(139, 0, 0);
+    color: #9e0000;
+  }
+  
+  .input-container1 span {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    padding: 0 0.4rem;
+    color: transparent;
+    pointer-events: none;
+    z-index: 500;
+  }
+  
+  .input-container1 span:before,
+  .input-container1 span:after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    transition: 0.3s;
+    height: 5px;
+    background-color: #af1111;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .input-container1 span:before {
+    left: 50%;
+  }
+  
+  .input-container1 span:after {
+    right: 50%;
+  }
+  
+  .input-container1.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 0.8rem;
+  }
+  
+  .input-container1.focus span:before,
+  .input-container1.focus span:after {
+    width: 50%;
+    opacity: 1;
+  }
+  
+  .contact-info {
+    padding: 2.3rem 2.2rem;
+    position: relative;
+  }
+  
+  .contact-info .title {
+    color: #af1111;
+  }
+  
+  .text {
+    background-image: url(https://st.depositphotos.com/1014014/2455/i/950/depositphotos_24551893-stock-photo-customer-satisfaction-checkmark-and-pencil.jpg);
+    color: #383838;
+    width: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .information {
+    display: flex;
+    color: #555;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  
+  .information i {
+    color: #af1111;
+  }
+  
+  .icon {
+    width: 28px;
+    margin-right: 0.7rem;
+  }
+  
+  .social-media {
+    padding: 2rem 0 0 0;
+  }
+  
+  .social-media p {
+    color: #333;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #af1111, #af1111);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-info:before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    border: 22px solid #af1111;
+    border-radius: 50%;
+    bottom: -77px;
+    right: 50px;
+    opacity: 0.3;
+  }
+  
+  .big-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #c04a4a, #f6fffd);
+    bottom: 50%;
+    right: 50%;
+    transform: translate(-40%, 38%);
+  }
+  
+  .big-circle:after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    top: calc(50% - 180px);
+    left: calc(50% - 180px);
+  }
+  
+  .square {
+    position: absolute;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(181%, 11%);
+    opacity: 0.2;
+  }
+  
+  @media (max-width: 850px) {
+    .form {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-info:before {
+      bottom: initial;
+      top: -75px;
+      right: 65px;
+      transform: scale(0.95);
+    }
+  
+    .contact-form:before {
+      top: -13px;
+      left: initial;
+      right: 70px;
+    }
+  
+    .square {
+      transform: translate(140%, 43%);
+      height: 350px;
+    }
+  
+    .big-circle {
+      bottom: 75%;
+      transform: scale(0.9) translate(-40%, 30%);
+      right: 50%;
+    }
+  
+    .text {
+      margin: 1rem 0 1.5rem 0;
+    }
+  
+    .social-media {
+      padding: 1.5rem 0 0 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .contact-info:before {
+      display: none;
+    }
+  
+    .square,
+    .big-circle {
+      display: none;
+    }
+  
+    form,
+    .contact-info {
+      padding: 1.7rem 1.6rem;
+    }
+  
+    .text,
+    .information,
+    .social-media p {
+      font-size: 0.8rem;
+    }
+  
+    .title {
+      font-size: 1.15rem;
+    }
+  
+    .social-icons a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+  
+    .icon {
+      width: 23px;
+    }
+  
+    .input {
+      padding: 0.45rem 1.2rem;
+      
+    }
+  
+    .btn {
+      padding: 0.45rem 1.2rem;
+    }
+  }
+  
+</style>
+<body>
+  <div class="container1">
+    <span class="big-circle"></span>
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Airline</h3>
+        <p class="text">
+          <div class="social-media">
+            The airline services for measured satisfaction level categories such: inflight wi-fi service, departure/arrival time convenience, ease of online booking, gate location, food and drink, online boarding, seat comfort, inflight entertainment, on-board service, leg-room service, baggage handling, check-in service, inflight ...
+        </p></div>
+
+        
+
+        
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form method="post" action="{% url 'model' %}">
+          {% csrf_token %}
+          <h3 class="title">MODEL</h3>
+          
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number"  name="Age" class="input" />
+            <label for="">Age</label>
+            <span>Age</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Inflight_wifi_service" class="input" />
+            <label for="">Inflight wifi service</label>
+            <span>Inflight wifi service</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Food_and_drink" class="input" />
+            <label for="">Food and drink</label>
+            <span>Food and drink</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Online_boarding" class="input" />
+            <label for="">Online boarding</label>
+            <span>Online boarding</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Seat_comfort" class="input" />
+            <label for="">Seat comfort</label>
+            <span>Seat comfort</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Inflight_entertainment" class="input" />
+            <label for="">Inflight entertainment</label>
+            <span>Inflight entertainment</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Onboard_service" class="input" />
+            <label for="">On-board service</label>
+            <span>On-board service</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Leg_room_service" class="input" />
+            <label for="">Leg room service</label>
+            <span>Leg room service</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" type="number" step="0.000001" name="Baggage_handling" class="input" />
+            <label for="">Baggage handling</label>
+            <span>Baggage handling</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" name="Checkin_service" step="0.000001" type="number" class="input" />
+            <label for="">Checkin service</label>
+            <span>Checkin service</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" step="0.0000000001" name="Inflight_service" type="number" class="input" />
+            <label for="">Inflight service</label>
+            <span>Inflight service</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" step="0.000000001" name="Cleanliness" type="number" class="input" />
+            <label for="">Cleanliness</label>
+            <span>Cleanliness</span>
+          </div>
+          <div class="input-container1">
+            <input style="font-size: 17px;" step="0.000001" type="number" name="Departure_Delay_in_Minutes" class="input" />
+            <label for="">Departure Delay in Minutes</label>
+            <span>Departure Delay in Minutes</span>
+          </div>
+          <div class="input-container1">
+            <h4 style="color: white;">Gender</h4>
+            <label for=""></label>
+            <div>
+              <select required type="text" id="id_gender" name="Gender" class="input" />
+                <option value="" disabled selected style="font-size: 15px;">Select </option>
+                <option value="1" style="color: black;font-size: 15px;">Male</option>
+                <option value="0" style="color: black;font-size: 15px;">Female</option>
+              </select>
+            </div>
+            <span></span>
+          </div>
+          <div class="input-container1">
+            <h4 style="color: white;">Customer Type</h4>
+            <label for=""></label>
+            <div> 
+              <select required type="text" name="Customer_Type" class="input" />
+                <option value="" disabled selected style="font-size: 15px;">Select</option>
+                <option value="0" style="color: black;font-size: 15px;">Loyal Customer</option>
+                <option value="1" style="color: black;font-size: 15px;">Disloyal Customer</option>
+                
+                
+              </select>
+            </div>
+            <span></span>
+          </div>
+          <div class="input-container1">
+            <h4 style="color: white;">Type of Travel</h4>
+            <label for=""></label>
+            <div>
+              <select required type="text" name="Type_of_Travel" class="input" />
+                <option value="" disabled selected style="font-size: 15px;">Select</option>
+                <option value="1" style="color: black;font-size: 15px;">Personal Travel</option>
+                <option value="0" style="color: black;font-size: 15px;">Business travel</option>
+                
+              </select>
+            </div>
+            <div class="input-container1">
+              <h4 style="color: white;">Class</h4>
+              <label for=""></label>
+              <div>
+                <select required type="text" name="Class" class="input" />
+                  <option value="" disabled selected style="font-size: 15px;">Select</option>
+                  <option value="1" style="color: black;font-size: 15px;">Eco</option>
+                  <option value="0" style="color: black;font-size: 15px;">Business</option>
+                  <option value="2" style="color: black;font-size: 15px;">Eco Plus</option>
+                  
+                </select>
+              </div>
+            <span></span>
+          </div>
+          <input type="submit" value="Submit" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+<script>
+  const inputs = document.querySelectorAll(".input");
+
+  function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+  }
+  
+  function blurFunc() {
+    let parent = this.parentNode;
+    if (this.value == "") {
+      parent.classList.remove("focus");
+    }
+  }
+  
+  inputs.forEach((input) => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+  });
+  
+</script>
+</html>
+
+{% endblock content %}
+

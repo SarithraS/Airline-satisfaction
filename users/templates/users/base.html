@@ -1,0 +1,132 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+      .hm-gradient {
+        background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    }
+    .navbar .dropdown-menu a:hover {
+        color: #616161 !important;
+    }
+    .darken-grey-text {
+        color: #2E2E2E;
+    }
+    
+         
+    </style>
+</head>
+
+<body class="hm-gradient">
+    
+    <main>
+        
+        <!--MDB Navbars-->
+        <div class="container mt-4" >
+
+            <nav class="mb-4 navbar navbar-expand-lg navbar-dark red darken-2" style="width: 1358px; left: -125px;">
+                
+                
+
+                <div class="collapse navbar-collapse" id="navbarText1">
+                    <ul class="navbar-nav mr-auto">
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" style="font-size: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" style="font-size: 20px;font-size: 20px; left: 30px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" href="{% url 'Basic_report' %}">Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" style="font-size: 20px;left: 50px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" href="{% url 'Metrics_report' %}">Metrics Report</a>
+                        </li>
+          
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" style="font-size: 20px;left: 70px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" href="{% url 'model' %}">Input Model</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" style="font-size: 20px;left: 90px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" href="{% url 'model_db' %}">Model Database</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link waves-effect waves-light" style="font-size: 20px;left: 110px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"  href="{% url 'users-profile' %}">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" style="font-size: 20px;left: 150px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" href="{% url 'logout_view' %}">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                          <h1 class="nav-link waves-effect waves-light" style="font-size: 20px; left: 400px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Welcome, {{user.first_name.title|default:'Guest'}}</h1>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                          <a class="nav-link waves-effect waves-light" href="{% url 'login' %}">Signin</a>
+                        </li>
+
+                        {% endif %}
+                        
+                      </ul>
+                    
+                </div>
+            </nav>
+            <!--/.Navbar -->
+            <!--Navbar -->
+            
+
+        </div>
+        <!--MDB Navbars-->
+      
+    </main>
+  
+
+
+
+            
+
+
+
+
+
+
+
+
+
+    
+
+
+    <div class="container p-3 my-3">
+        <div class="row">
+            <div class="col-md-12">
+                {% if messages %}
+                    <div class="alert alert-dismissible" role="alert">
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                        {% endfor %}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

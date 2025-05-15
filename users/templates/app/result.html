@@ -1,0 +1,135 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  /* Reset default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styling */
+  
+  .container22 {
+    max-width: 900px; /* Increased max-width */
+    margin: 30px auto; /* Increased margin */
+    padding: 30px; /* Increased padding */
+    background-color: #f4f4f4;
+    font-size: 15px; /* Light gray background */
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin */
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 3.5rem; /* Larger font size */
+    margin-bottom: 20px; /* Increased margin */
+  }
+  
+  main {
+    margin-bottom: 30px; /* Increased margin */
+  }
+  
+  .reasons h2, .details h2 {
+    color: #555;
+    font-size: 2.2rem; /* Slightly larger font size */
+    margin-bottom: 15px; /* Increased margin */
+  }
+  
+  ul {
+    list-style-type: square; /* Changed list style to square */
+    margin-left: 30px; /* Increased margin */
+  }
+  
+  li {
+    margin-bottom: 15px; /* Increased margin */
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 30px; /* Increased margin */
+    color: #888; /* Slightly lighter text color */
+  }
+  
+</style>
+
+{% if prediction_text == 'Dissatisfied' %}
+
+
+
+
+<div class="container22">
+  <header>
+    <h1><b style="font-size: 40px; color: maroon;"> Dissatisfaction</b></h1>
+      <h1><b>Reasons for Airline Customer Dissatisfaction</b></h1>
+  </header>
+  <main>
+      <section class="reasons">
+          <h2><b>Common Reasons:</b></h2>
+          <ul>
+              <li>Flight Delays and Cancellations</li>
+              <li>Poor Customer Service</li>
+              <li>Lost Baggage or Damaged Luggage</li>
+              <li>Uncomfortable Seating</li>
+              <li>Hidden Fees</li>
+          </ul>
+      </section>
+      <section class="details">
+          <h2><b>Details:</b></h2>
+          <p>Flight delays and cancellations are often cited as major reasons for dissatisfaction among airline passengers. Poor customer service, including rude staff or unhelpful responses, also contributes significantly.</p>
+          <p>Lost baggage or damaged luggage incidents can lead to frustration and inconvenience for passengers. Issues with uncomfortable seating, such as lack of legroom or malfunctioning seats, also contribute to dissatisfaction.</p>
+          <p>Hidden fees, such as unexpected charges for baggage or seat selection, can leave passengers feeling misled and dissatisfied with their overall experience.</p>
+          <p>Overbooking and seat allocation problems can lead to frustration and inconvenience, especially when passengers are involuntarily bumped from flights.</p>
+      <p>Subpar in-flight entertainment, such as outdated or malfunctioning systems, can disappoint passengers looking for a pleasant journey.</p>
+      <p>Inadequate food and beverage services, including limited options or poor quality, detract from the overall travel experience.</p>
+      <p>Unresponsive customer support, with delayed responses or lack of resolution for issues, can leave passengers feeling neglected and dissatisfied.</p>
+      <p>Difficulties with online booking systems, such as glitches or unclear policies, can cause confusion and frustration during the booking process.</p>
+      </section>
+  </main>
+</div>
+
+  {% elif prediction_text == 'satisfied' %}
+
+  <div class="container22">
+    <header>
+      <h1><b style="font-size: 40px; color: rgb(128, 0, 0);">Satisfaction</b></h1>
+      <h1><b>Reasons for Airline Customer Satisfaction</b></h1>
+    </header>
+    <main>
+      <section class="reasons">
+        <h2><b>Common Reasons:</b></h2>
+        <ul>
+          <li>On-time Departures and Arrivals</li>
+          <li>Excellent Customer Service</li>
+          <li>Efficient Baggage Handling</li>
+          <li>Comfortable Seating</li>
+          <li>Transparent Pricing</li>
+        </ul>
+      </section>
+      <section class="details">
+        <h2><b>Details:</b></h2>
+        <p>Timely departures and arrivals are key factors contributing to positive passenger experiences. They reduce stress and ensure smooth travel.</p>
+        <p>Outstanding customer service, characterized by friendly and helpful staff, enhances overall satisfaction levels significantly.</p>
+        <p>Efficient baggage handling, including minimal instances of lost luggage and prompt resolution of issues, is crucial for passenger satisfaction.</p>
+        <p>Comfortable seating options, offering adequate legroom and well-maintained seats, contribute to a pleasant travel experience.</p>
+        <p>Transparent pricing practices, with clear explanations of fees and charges, build trust and satisfaction among passengers.</p>
+      </section>
+    </main>
+  </div>
+  
+  
+
+
+        
+        
+{% endif %}      
+{% endblock content %}
+
