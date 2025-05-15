@@ -1,0 +1,908 @@
+{"intents": [
+    
+    {
+        "tag": "greetings",
+        "patterns": [
+            "Hello",
+            "Hi",
+            "Hey",
+            "Greetings",
+            "Good morning",
+            "Good afternoon",
+            "Good evening"
+        ],
+        "responses": [
+            "Hello! How can I assist you today?",
+            "Hi there! How can I help you with your today?",
+            "Hey! I'm here to listen and support you. What can I do for you today?",
+            "Greetings! How can I assist you on your journey?",
+            "Good morning! How can I support your today?",
+            "Good afternoon! I'm here to help with your needs. How can I assist you?",
+            "Good evening! How can I support your today?"
+        ]
+    },
+    {
+        "tag": "airline_customer_service_definition",
+        "patterns": [
+            "What is airline customer service?",
+            "Define airline customer service",
+            "Explain customer service in airlines",
+            "What does airline customer service mean?",
+            "Describe customer service for airlines"
+        ],
+        "responses": [
+            "Airline customer service refers to the assistance and support provided by an airline to its customers before, during, and after their travel experience. This encompasses a wide range of services, including booking and reservation support, handling inquiries about flights, addressing concerns regarding baggage or seating, and managing flight disruptions or cancellations. Excellent customer service in the airline industry is crucial for ensuring a positive travel experience, enhancing customer satisfaction, and fostering loyalty. It involves clear communication, prompt problem resolution, empathy, and a willingness to go above and beyond to meet customers' needs."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_satisfaction_importance",
+        "patterns": [
+            "Why is airline customer satisfaction important?",
+            "Explain the importance of customer satisfaction in airlines",
+            "Why does airline customer service matter?",
+            "Importance of keeping airline customers happy",
+            "Why focus on airline satisfaction?"
+        ],
+        "responses": [
+            "Customer satisfaction is vital in the airline industry because it directly influences the success and reputation of an airline. High levels of customer satisfaction lead to increased customer loyalty, repeat business, and positive word-of-mouth referrals, all of which contribute to the airline's profitability and market share. Additionally, satisfied customers are more likely to provide constructive feedback, which can help airlines identify areas for improvement. On the other hand, poor customer satisfaction can result in negative reviews, loss of business to competitors, and potential legal issues if passengers feel their rights were violated. Therefore, investing in customer satisfaction through quality service, comfortable seating, and efficient problem resolution is essential for long-term growth and success."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_complaint_handling",
+        "patterns": [
+            "How should airlines handle complaints?",
+            "Best practices for dealing with customer complaints in airlines",
+            "How do airlines resolve passenger issues?",
+            "Airline complaint resolution strategies",
+            "Managing airline customer dissatisfaction"
+        ],
+        "responses": [
+            "Handling complaints effectively is crucial for maintaining airline customer satisfaction. Airlines should first ensure that they listen to the customer's issue attentively and empathetically, acknowledging their concerns. It's important to provide clear and honest information about the situation and offer potential solutions, such as rebooking on the next available flight, providing meal vouchers, or offering compensation where appropriate. A quick resolution helps in calming the customer and restoring their confidence in the airline. Additionally, airlines can use feedback from complaints to improve their services and prevent similar issues in the future. Training staff in conflict resolution and empowering them to make decisions can also significantly enhance the complaint-handling process."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_flight_disruption_management",
+        "patterns": [
+            "How do airlines manage flight disruptions?",
+            "Handling delays and cancellations in airlines",
+            "Airline policies for disrupted flights",
+            "Managing passenger expectations during flight disruptions",
+            "What to do when flights are delayed or canceled?"
+        ],
+        "responses": [
+            "Flight disruptions, such as delays or cancellations, are a common challenge in the airline industry, often due to factors beyond the airline's control, like weather or technical issues. To manage these effectively, airlines should proactively communicate with passengers, providing timely updates on the flight's status. Offering alternatives, such as rebooking on another flight, arranging accommodations for extended delays, or providing compensation for inconvenience, can help alleviate customer frustration. It is also helpful for airlines to have a dedicated team that can assist passengers during such events, ensuring that travelers are aware of their rights and available options. By handling disruptions efficiently, airlines can minimize the negative impact on customer satisfaction."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_loyalty_programs",
+        "patterns": [
+            "What are airline loyalty programs?",
+            "How do frequent flyer programs work?",
+            "Benefits of airline loyalty programs",
+            "Explain airline rewards programs",
+            "What is a frequent flyer program?"
+        ],
+        "responses": [
+            "Airline loyalty programs, often known as frequent flyer programs, are designed to reward customers for their continued patronage. These programs offer passengers points or miles for each flight, which can be redeemed for future flights, upgrades, or other rewards such as hotel stays and car rentals. Loyalty programs aim to encourage repeat business and build long-term customer relationships by providing additional benefits such as priority boarding, access to airport lounges, and extra baggage allowances. The more frequently a passenger travels with the airline, the more benefits they accrue, creating a win-win situation for both the airline and the customer."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_owner_responsibilities",
+        "patterns": [
+            "What are the responsibilities of an airline owner?",
+            "Duties of airline owners",
+            "Airline ownership responsibilities",
+            "Explain the role of an airline owner",
+            "What does an airline owner do?"
+        ],
+        "responses": [
+            "Airline owners have a wide range of responsibilities that encompass both operational and strategic aspects of running an airline. They are involved in setting company policies, managing financial performance, ensuring regulatory compliance, and overseeing the safety and security of operations. Owners also play a key role in business development, including forming partnerships, expanding routes, and investing in new aircraft. Additionally, they must prioritize customer satisfaction and employee welfare, as these are critical to maintaining a competitive edge. Decision-making regarding marketing strategies, pricing models, and customer service standards also falls under their purview."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_feedback_system",
+        "patterns": [
+            "How do airlines collect customer feedback?",
+            "Best practices for gathering passenger feedback",
+            "Airline customer feedback systems",
+            "How can airlines improve based on feedback?",
+            "Importance of customer feedback in airlines"
+        ],
+        "responses": [
+            "Customer feedback is an essential tool for airlines to improve their services and address passengers' needs. Feedback can be collected through various channels such as in-flight surveys, post-flight emails, mobile apps, and customer service interactions. Some airlines also provide incentives for customers to share their experiences, such as discounts or loyalty points. Once feedback is gathered, it should be analyzed to identify recurring issues and opportunities for improvement. Implementing changes based on passenger feedback can lead to better service quality, increased customer satisfaction, and enhanced loyalty. Airlines should also communicate the changes made in response to feedback, showing customers that their opinions matter."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_safety_protocols",
+        "patterns": [
+            "What are safety protocols in airlines?",
+            "Explain airline safety measures",
+            "How do airlines ensure passenger safety?",
+            "Airline safety policies",
+            "Importance of safety in airlines"
+        ],
+        "responses": [
+            "Safety protocols in airlines encompass a variety of measures designed to protect passengers and crew members during air travel. These measures include rigorous aircraft maintenance schedules, pilot and crew training, emergency preparedness procedures, and compliance with aviation regulatory standards. Airlines also implement in-flight safety demonstrations, enforce seatbelt usage, and ensure that emergency equipment, such as life vests and oxygen masks, is easily accessible. With increasing concerns over health, especially during global pandemics, airlines have also adopted enhanced cleaning procedures and require face masks. Ensuring passenger safety is not only a regulatory requirement but also a critical factor in maintaining customer trust."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_ticket_pricing",
+        "patterns": [
+            "How do airlines price their tickets?",
+            "Factors influencing airline ticket prices",
+            "Explain dynamic pricing in airlines",
+            "Why do airline prices fluctuate?",
+            "Airline ticket pricing strategies"
+        ],
+        "responses": [
+            "Airline ticket pricing is influenced by a variety of factors, including demand, time of booking, route popularity, seasonality, and operational costs such as fuel prices. Airlines often use dynamic pricing strategies, where ticket prices fluctuate based on real-time demand and market conditions. For instance, tickets purchased closer to the departure date may be more expensive due to limited seat availability. Pricing models also take into account the competition on the same route, offering discounts or promotions to attract passengers. The class of service (economy, business, first class) and added services like extra baggage or seat selection further contribute to ticket pricing."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_environmental_impact",
+        "patterns": [
+            "What is the environmental impact of airlines?",
+            "How do airlines affect the environment?",
+            "Explain airline carbon emissions",
+            "Airline sustainability practices",
+            "Environmental concerns with air travel"
+        ],
+        "responses": [
+            "Airlines contribute to environmental impact primarily through carbon emissions from aircraft engines, which release greenhouse gases into the atmosphere, contributing to climate change. Additionally, noise pollution and waste generation from in-flight services can affect local communities. To address these concerns, many airlines are adopting sustainability practices such as using more fuel-efficient aircraft, investing in carbon offset programs, and implementing waste reduction measures like minimizing single-use plastics. Some are also exploring alternative fuels, such as biofuels, which produce fewer emissions than traditional jet fuel. Balancing operational efficiency with environmental sustainability is an ongoing challenge for the aviation industry."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_booking_process",
+        "patterns": [
+            "How do I book a flight?",
+            "What is the flight booking process?",
+            "How can I reserve a plane ticket?",
+            "Steps to book an airline ticket",
+            "How does airline booking work?"
+        ],
+        "responses": [
+            "Booking a flight usually involves selecting your travel dates, choosing a destination, and searching for available flights through the airline's website or a travel agency. Once you've found a suitable flight, you can select your seat preferences, input personal details, and complete the payment process. Some airlines offer additional options during booking, such as extra baggage, travel insurance, or in-flight meal preferences. After completing the payment, you’ll receive a confirmation email with your e-ticket and booking reference, which you'll need at check-in. Always review your booking details to ensure accuracy."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_baggage_policy",
+        "patterns": [
+            "What is the baggage policy for airlines?",
+            "Explain airline luggage rules",
+            "How much luggage can I take on a flight?",
+            "Airline rules for carry-on and checked bags",
+            "What is the baggage allowance for airlines?"
+        ],
+        "responses": [
+            "Baggage policies vary by airline, but generally include rules for both carry-on and checked baggage. Carry-on bags typically have size and weight restrictions and must fit in the overhead bin or under the seat. Checked baggage policies depend on the class of service and the airline's specific rules, with weight allowances usually ranging from 20kg to 30kg per bag. Excess baggage may incur additional fees. Some airlines offer a free checked bag, while budget airlines may charge for any checked luggage. It’s important to review your airline’s baggage policy before traveling to avoid unexpected fees."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_inflight_entertainment",
+        "patterns": [
+            "What entertainment is available on flights?",
+            "Do airlines provide in-flight entertainment?",
+            "How does airline entertainment work?",
+            "Airline movies and music options",
+            "Can I watch shows on a flight?"
+        ],
+        "responses": [
+            "Many airlines offer in-flight entertainment to enhance the travel experience. This can include movies, TV shows, music, podcasts, games, and even live news. Entertainment is typically provided through seat-back screens or personal devices connected to the airline's Wi-Fi. Passengers can choose from a variety of content, which may vary depending on the airline, aircraft type, and flight length. Premium classes often have a wider selection of entertainment options, and some airlines even offer virtual reality headsets or noise-canceling headphones. Check the airline's website before flying to see what entertainment options are available."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_meal_options",
+        "patterns": [
+            "What food is served on flights?",
+            "Do airlines provide meals during the flight?",
+            "What are the meal options on a plane?",
+            "Airline food menu details",
+            "Can I order special meals on a flight?"
+        ],
+        "responses": [
+            "Airline meal options vary depending on the airline, flight duration, and ticket class. For short domestic flights, light snacks or drinks may be offered, while longer international flights typically include a full meal service with several courses. Special dietary meals such as vegetarian, vegan, gluten-free, halal, or kosher can usually be requested in advance. Some airlines even provide premium meals for an additional fee, allowing passengers to pre-select gourmet dishes before the flight. It’s advisable to check the airline's meal policy and make any special meal requests at least 24-48 hours before departure."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_check_in_process",
+        "patterns": [
+            "How do I check in for a flight?",
+            "What is the check-in process for airlines?",
+            "When should I check in for a flight?",
+            "Airline check-in options",
+            "Can I check in online for my flight?"
+        ],
+        "responses": [
+            "The check-in process for airlines typically starts 24 to 48 hours before the flight. Passengers can check in online via the airline's website or mobile app, which allows them to choose seats and download their boarding pass. Airport check-in counters and self-service kiosks are also available, where you can drop off any checked luggage and collect your boarding pass. For international flights, additional time may be needed for passport and visa verification. It’s recommended to check the airline's specific check-in policy and arrive at the airport with enough time to complete the process."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_seat_selection",
+        "patterns": [
+            "How can I choose my seat on a flight?",
+            "Does the airline allow seat selection?",
+            "How does seat selection work for airlines?",
+            "Airline seat reservation policies",
+            "Can I change my seat on the plane?"
+        ],
+        "responses": [
+            "Most airlines offer seat selection during the booking process or at check-in. Passengers can choose standard seats for free or opt for premium options, such as extra legroom, for an additional fee. Some airlines allow seat changes up to a certain time before departure. Seat selection may also be subject to availability, especially for last-minute bookings. Premium classes like business or first class usually come with pre-assigned seats. If you need a specific seating arrangement, such as traveling with a family or requiring aisle access, it’s best to select your seats as early as possible."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_refund_policy",
+        "patterns": [
+            "How do airline refunds work?",
+            "What is the refund policy for airlines?",
+            "Can I get a refund for a canceled flight?",
+            "Airline ticket refund options",
+            "Explain airline cancellation refunds"
+        ],
+        "responses": [
+            "Airline refund policies vary by ticket type and airline regulations. Non-refundable tickets generally do not qualify for a refund but may be eligible for a credit toward future travel with a change fee. Refundable tickets usually offer a full or partial refund if canceled within the allowed time frame. In cases of flight cancellations by the airline, passengers are typically entitled to a full refund or a rebooking on another flight. It's important to review the specific terms of your ticket and contact the airline’s customer service for assistance with the refund process."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_flight_upgrades",
+        "patterns": [
+            "How can I upgrade my flight?",
+            "Are there ways to upgrade to business class?",
+            "Can I upgrade my seat on the plane?",
+            "Explain airline upgrade options",
+            "Airline flight upgrade policies"
+        ],
+        "responses": [
+            "Flight upgrades can be obtained through various means, such as using airline loyalty program points, paying an upgrade fee, or receiving an offer to upgrade closer to the departure date. Some airlines also offer complimentary upgrades based on frequent flyer status. Passengers can request an upgrade during booking, check-in, or at the gate if seats are available. Premium upgrades often include benefits like extra legroom, priority boarding, additional baggage allowance, and enhanced in-flight service. The availability and cost of upgrades vary by airline and demand, so it's advisable to check with the airline directly for specific upgrade policies."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_delay_compensation",
+        "patterns": [
+            "Do airlines compensate for delayed flights?",
+            "Can I get compensation for a delayed flight?",
+            "What are my rights if my flight is delayed?",
+            "Airline delay compensation policies",
+            "How does flight delay compensation work?"
+        ],
+        "responses": [
+            "Compensation for flight delays depends on the airline’s policies and regional regulations. In some regions, such as the EU, passengers are entitled to compensation if a delay exceeds a certain number of hours and is not caused by extraordinary circumstances like severe weather. Compensation may include monetary refunds, vouchers, or accommodations for overnight delays. For domestic flights, airlines may offer meal vouchers or rebooking options as a form of goodwill. Always check the airline’s specific compensation policies and know your passenger rights regarding delays."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_code_sharing",
+        "patterns": [
+            "What is a code-sharing agreement in airlines?",
+            "Explain airline code-sharing",
+            "How do code-share flights work?",
+            "Airline code-sharing policies",
+            "What does code-share mean in air travel?"
+        ],
+        "responses": [
+            "A code-sharing agreement is a partnership between airlines where they share the same flight, allowing one airline to sell seats on the other’s flight under its own flight number. This helps expand the airline’s network, providing passengers with more flight options and destinations. For example, a flight operated by Airline A may be sold by Airline B as a code-share flight with a different flight number. Although the ticket is purchased through one airline, the flight may be operated by another. Code-sharing offers convenience for travelers, especially when booking connecting flights."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_pet_travel_policy",
+        "patterns": [
+            "Can I bring my pet on a flight?",
+            "What are the rules for traveling with pets?",
+            "How do airlines handle pet travel?",
+            "Are pets allowed in the cabin?",
+            "Explain airline pet travel policies"
+        ],
+        "responses": [
+            "Most airlines allow pets to travel either in the cabin or in the cargo hold, depending on their size and the airline's policies. Small pets that fit in a carrier under the seat can typically travel in the cabin, while larger pets may need to be transported in the cargo area. Some airlines have specific breed restrictions or may not allow pets to travel during extreme temperatures. It’s important to check the airline's pet policy, including health certificate requirements, pet fees, and carrier size regulations, before booking your flight."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_frequent_flyer_program",
+        "patterns": [
+            "What is a frequent flyer program?",
+            "How do airline loyalty programs work?",
+            "Can I earn miles for my flights?",
+            "Explain frequent flyer benefits",
+            "How do I join an airline rewards program?"
+        ],
+        "responses": [
+            "Frequent flyer programs are loyalty programs offered by airlines to reward customers for their travel. Members earn miles or points for every flight, which can be redeemed for rewards such as free flights, upgrades, or merchandise. Additional benefits may include priority boarding, extra baggage allowance, and access to airport lounges. To join, sign up on the airline's website and start earning points whenever you travel. Points may also be earned through partner activities like hotel stays, car rentals, and co-branded credit card purchases."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_lounge_access",
+        "patterns": [
+            "How can I access the airline lounge?",
+            "What are the benefits of airline lounges?",
+            "Can I buy lounge access?",
+            "Airport lounge entry rules",
+            "How do I get into a business class lounge?"
+        ],
+        "responses": [
+            "Airport lounge access is typically available to business and first-class passengers, frequent flyer program members with elite status, or credit card holders with lounge access benefits. Some lounges also offer paid entry to economy passengers, either as a one-time pass or through lounge membership programs. Lounges provide amenities such as comfortable seating, food and beverages, Wi-Fi, showers, and sometimes even spa services. It’s a great way to relax before your flight. Check your airline’s lounge access policies and any associated fees."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_group_booking",
+        "patterns": [
+            "How can I book a group flight?",
+            "Does the airline offer group travel discounts?",
+            "Group booking policies for airlines",
+            "How to arrange a flight for a large group?",
+            "Can I get a discount for group travel?"
+        ],
+        "responses": [
+            "Many airlines offer group booking options for travelers, typically for groups of 10 or more. Group bookings may come with benefits like discounted fares, flexible payment terms, and the ability to change passenger names. To arrange a group booking, contact the airline's group travel department or fill out a request form on their website. The airline may also provide a dedicated representative to help with the booking process. It’s a convenient way to coordinate travel for events, sports teams, or family gatherings."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_special_assistance",
+        "patterns": [
+            "Can I request special assistance at the airport?",
+            "How does airline special assistance work?",
+            "Can airlines help with wheelchair service?",
+            "Explain airline assistance for disabled passengers",
+            "What are the policies for special needs travelers?"
+        ],
+        "responses": [
+            "Airlines offer special assistance services to passengers who need help during their journey, including wheelchair assistance, mobility aids, or support for vision or hearing impairments. It’s important to notify the airline in advance to ensure proper arrangements are made. Assistance can be requested during booking or added to your reservation later. Services may include help with boarding, connecting flights, and baggage handling. If you need medical assistance or have a service animal, check the airline's policies to understand any requirements."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_unaccompanied_minors",
+        "patterns": [
+            "What is the policy for unaccompanied minors?",
+            "Can children fly alone?",
+            "Explain airline rules for unaccompanied minors",
+            "Is there an age limit for children traveling alone?",
+            "How does the airline handle minors traveling alone?"
+        ],
+        "responses": [
+            "Airlines have specific policies for unaccompanied minors, allowing children of certain ages to travel alone with additional supervision. Typically, children aged 5-11 can travel alone on direct flights with the airline’s unaccompanied minor service, while those aged 12-17 may be considered young travelers who do not require assistance but can still opt for it. The service often includes check-in assistance, escorting the child through security, and supervision during the flight and at the destination until they are released to an authorized adult. Fees may apply, and advance booking is required."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_bereavement_fares",
+        "patterns": [
+            "Do airlines offer bereavement fares?",
+            "Can I get a discount for emergency travel?",
+            "Explain bereavement fare policies",
+            "How to book a bereavement ticket?",
+            "Are there special rates for family emergencies?"
+        ],
+        "responses": [
+            "Some airlines offer bereavement fares for passengers traveling due to the death or imminent death of a family member. These fares may provide a discount or flexible booking terms, such as waived change fees. To qualify, you may need to provide documentation such as a death certificate or medical note. Bereavement fares are not always the lowest available rates, so it’s advisable to compare options. Contact the airline directly to inquire about bereavement fare policies and how to book a ticket under these circumstances."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_cabin_classes",
+        "patterns": [
+            "What are the different classes on an airplane?",
+            "Explain the types of cabin classes for flights",
+            "What is the difference between economy and business class?",
+            "How does first class compare to economy?",
+            "Can I change my cabin class after booking?"
+        ],
+        "responses": [
+            "Airlines typically offer multiple cabin classes, including economy, premium economy, business, and first class. Economy is the most basic and affordable, with limited legroom and standard service. Premium economy offers more legroom and upgraded meals. Business class provides spacious seating, gourmet dining, and additional amenities like lie-flat beds on long-haul flights. First class is the most luxurious, with private suites, premium dining, and exclusive services. Some airlines also have different service levels within each class, depending on the aircraft type and route."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_infant_travel",
+        "patterns": [
+            "Can I travel with an infant on a plane?",
+            "How do airlines accommodate infants?",
+            "Are there special rules for flying with a baby?",
+            "Do I need to buy a separate seat for my infant?",
+            "What is the airline policy for lap infants?"
+        ],
+        "responses": [
+            "Most airlines allow infants under two years old to travel as lap infants, meaning they can sit on an adult's lap without a separate seat. Some airlines may charge a small fee for lap infants on international flights. Parents can also choose to purchase a seat for their infant and use an approved car seat. For long-haul flights, some airlines provide bassinets that can be attached to bulkhead seats. It's recommended to notify the airline when booking if you're traveling with an infant to arrange for any special accommodations or requests."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_flight_status_updates",
+        "patterns": [
+            "How do I check my flight status?",
+            "Can I get updates on flight delays?",
+            "Explain how to track flight status",
+            "How do I know if my flight is on time?",
+            "Can airlines notify me about changes in flight status?"
+        ],
+        "responses": [
+            "Flight status updates can be checked on the airline's website, mobile app, or via third-party flight tracking services. Enter your flight number or departure city to view the latest information, including delays, cancellations, or gate changes. Many airlines also offer text or email alerts for real-time updates. Signing up for notifications ensures you receive immediate information about any changes to your flight schedule. It's a good practice to double-check your flight status on the day of travel, as schedules may change due to weather, air traffic, or other factors."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_inflight_meals",
+        "patterns": [
+            "Are meals provided on the flight?",
+            "Can I request a special meal?",
+            "What kind of food is served on airlines?",
+            "Explain airline meal options",
+            "Do airlines accommodate dietary restrictions?"
+        ],
+        "responses": [
+            "Most airlines offer in-flight meal services depending on the length and class of the flight. On long-haul or international flights, meals are usually included in the ticket price, with options for special dietary requests such as vegetarian, vegan, gluten-free, or halal. For shorter flights, meals may not be provided, or you may need to purchase snacks and drinks. It’s advisable to request special meals at least 24 hours before your flight, either during booking or by contacting the airline directly."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_baggage_policy",
+        "patterns": [
+            "What is the baggage policy for airlines?",
+            "How many bags can I bring?",
+            "Explain airline carry-on rules",
+            "What are the baggage weight limits?",
+            "Do I need to pay for extra luggage?"
+        ],
+        "responses": [
+            "Airline baggage policies vary, but generally, passengers are allowed one carry-on bag and one personal item for free. Checked baggage may incur fees based on the weight, size, and number of bags. Economy class usually has stricter baggage allowances compared to business or first class. For international flights, the first checked bag may be included in the fare. Oversized or overweight bags will likely incur additional charges. Make sure to check your airline's specific baggage policy before packing for your trip."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_safety_measures",
+        "patterns": [
+            "What are the safety measures on airlines?",
+            "How do airlines ensure passenger safety?",
+            "Explain airline safety protocols",
+            "Are planes sanitized regularly?",
+            "What should I know about airline safety procedures?"
+        ],
+        "responses": [
+            "Airlines implement a range of safety measures to ensure passenger well-being, including regular aircraft maintenance, pre-flight safety checks, and strict compliance with aviation regulations. In response to health concerns, many airlines have increased the frequency of cleaning and disinfection, especially in high-touch areas. Cabin air is filtered using HEPA filters, which remove most airborne particles. Safety demonstrations are conducted before takeoff, and emergency equipment like oxygen masks and life vests are provided. Adherence to safety protocols, such as wearing seat belts, is also essential for a safe journey."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_cancellation_policy",
+        "patterns": [
+            "What is the airline's cancellation policy?",
+            "Can I get a refund if I cancel my flight?",
+            "How do airline cancellations work?",
+            "Explain refund policies for cancelled flights",
+            "Are there fees for cancelling a flight?"
+        ],
+        "responses": [
+            "Airline cancellation policies vary depending on the fare type and booking conditions. Some tickets, such as refundable or flexible fares, allow cancellations with minimal or no fees, while non-refundable fares may incur a fee or offer a credit for future travel. For cancellations due to circumstances beyond your control, such as severe weather or government restrictions, airlines may offer refunds or rebooking options. It is recommended to review your airline's specific cancellation policy when booking and consider travel insurance for additional coverage."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_seat_selection",
+        "patterns": [
+            "Can I choose my seat on a flight?",
+            "How does seat selection work on airlines?",
+            "Is there a fee for choosing a seat?",
+            "Explain how to select a seat on a plane",
+            "Can I upgrade my seat?"
+        ],
+        "responses": [
+            "Seat selection is usually available during the booking process, and passengers can choose from available seats for an additional fee or at no cost, depending on the airline. Some airlines offer free seat selection to certain fare types, loyalty program members, or during online check-in. Premium seats, such as those with extra legroom or near the front, may come at a higher price. Upgrading to a higher cabin class is also an option, either by paying the fare difference or using loyalty program miles."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_check_in_procedure",
+        "patterns": [
+            "How do I check in for my flight?",
+            "What is the check-in procedure at the airport?",
+            "Can I check in online?",
+            "Explain the airline check-in process",
+            "What is the latest I can check in for a flight?"
+        ],
+        "responses": [
+            "Check-in can be done online, via mobile app, or at the airport. Online check-in usually opens 24-48 hours before departure, allowing you to select your seat and obtain a digital boarding pass. Airport check-in can be completed at self-service kiosks or the airline's check-in counters. For international flights, it's advisable to check in earlier to allow time for security and passport control. The check-in deadline varies by airline and airport, generally ranging from 45 minutes to 2 hours before departure."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_delayed_flight_compensation",
+        "patterns": [
+            "What happens if my flight is delayed?",
+            "Can I get compensation for a delayed flight?",
+            "Explain airline policies for delayed flights",
+            "How do airlines handle long delays?",
+            "Am I entitled to compensation if my flight is delayed?"
+        ],
+        "responses": [
+            "Airline compensation for delayed flights varies based on the duration of the delay, the cause, and local regulations. For significant delays, airlines may provide meal vouchers, accommodation, or travel credits. In some regions, such as the EU, passengers may be entitled to monetary compensation for delays exceeding a certain time threshold. If the delay is caused by factors outside the airline's control, such as weather, compensation may not be provided. It's best to review your airline's delay policy and applicable travel regulations."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_inflight_entertainment",
+        "patterns": [
+            "Is there in-flight entertainment available?",
+            "What kind of entertainment is on the plane?",
+            "Can I watch movies on the flight?",
+            "Explain airline in-flight entertainment options",
+            "Are there Wi-Fi services on the plane?"
+        ],
+        "responses": [
+            "In-flight entertainment varies by airline and flight duration, but typically includes movies, TV shows, music, and games. Some airlines provide personal screens for each seat, while others offer streaming services accessible through passengers' devices. Wi-Fi is also available on many flights, though it may come with a fee or data limit. For long-haul flights, airlines often include a selection of international films and shows. Make sure to bring your own headphones or check if they are provided on board."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_lost_luggage_procedure",
+        "patterns": [
+            "What do I do if my luggage is lost?",
+            "How do airlines handle lost baggage?",
+            "Can I get compensation for lost luggage?",
+            "Explain lost luggage procedures",
+            "What should I do if my bag doesn't arrive?"
+        ],
+        "responses": [
+            "If your luggage is lost, report it immediately to the airline's baggage service desk at the airport. You will need to provide details such as your contact information, flight number, and bag description. Most airlines use a tracking system to locate delayed bags and will arrange delivery once found. If the bag is not recovered within a certain period, compensation may be offered based on the value of the contents and the airline's policies. It’s recommended to keep important items and valuables in your carry-on."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_emergency_exit_seat",
+        "patterns": [
+            "Can I sit in an emergency exit row?",
+            "What are the requirements for exit row seating?",
+            "Explain emergency exit seat rules",
+            "Are there any restrictions for exit row seats?",
+            "What should I know about sitting in an exit row?"
+        ],
+        "responses": [
+            "Emergency exit row seats are reserved for passengers who are able and willing to assist in an emergency. To sit in an exit row, you must meet certain requirements, such as being at least 15 years old, physically able, and fluent in the language spoken by the crew. Passengers with infants, certain medical conditions, or mobility issues may not be eligible. The extra legroom can be a benefit, but it's important to understand and accept the responsibilities associated with this seating."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_frequent_flyer_program",
+        "patterns": [
+            "What is a frequent flyer program?",
+            "How do airline loyalty programs work?",
+            "Can I earn points for flights?",
+            "Explain frequent flyer benefits",
+            "How do I join a frequent flyer program?"
+        ],
+        "responses": [
+            "Frequent flyer programs are airline loyalty programs that allow passengers to earn miles or points for each flight they take. These points can be redeemed for rewards such as free flights, seat upgrades, hotel stays, or car rentals. Membership is typically free, and passengers can sign up online. Some programs offer additional benefits such as priority boarding, extra baggage allowance, and access to airport lounges. The more you fly, the higher your status level, which can unlock more perks."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_lounge_access",
+        "patterns": [
+            "How do I get access to airport lounges?",
+            "Can I use an airline lounge with economy class?",
+            "Explain how airline lounge access works",
+            "Are lounges available for frequent flyer members?",
+            "Do lounges offer food and drinks?"
+        ],
+        "responses": [
+            "Airport lounge access is usually available to business and first-class passengers, as well as frequent flyer members with elite status. Some lounges can also be accessed by purchasing a day pass or through a lounge membership program like Priority Pass. Lounges typically offer amenities such as complimentary food and drinks, Wi-Fi, comfortable seating, and workspaces. Some lounges may also provide showers and sleeping areas for long layovers. Check with your airline for specific lounge access policies."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_pet_travel",
+        "patterns": [
+            "Can I travel with my pet?",
+            "What are the rules for pets on airlines?",
+            "Are there extra charges for pet travel?",
+            "Explain how pet travel works on airlines",
+            "Can my pet fly in the cabin with me?"
+        ],
+        "responses": [
+            "Most airlines allow pet travel, either in the cabin, as checked baggage, or as cargo, depending on the size and type of animal. Smaller pets, such as cats and small dogs, may be allowed in the cabin if they fit in a carrier under the seat. Larger pets typically travel in the cargo hold. Airlines may have restrictions on certain breeds or types of animals, and pet travel often incurs additional fees. Make sure to check your airline's pet policy and health requirements before booking."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_special_assistance",
+        "patterns": [
+            "What assistance is available for passengers with disabilities?",
+            "Can airlines provide help for elderly passengers?",
+            "Explain special assistance options on airlines",
+            "How do I request wheelchair assistance?",
+            "Do airlines accommodate special needs passengers?"
+        ],
+        "responses": [
+            "Airlines offer various special assistance services for passengers with disabilities, elderly travelers, and those with medical conditions. This includes wheelchair assistance, priority boarding, special seating arrangements, and help with boarding or disembarking. To ensure that your needs are met, it's important to notify the airline at least 48 hours before your flight. You may also request assistance for guide dogs or service animals and specific dietary requirements for in-flight meals."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_overbooking_policy",
+        "patterns": [
+            "What happens if my flight is overbooked?",
+            "Can airlines bump passengers from a flight?",
+            "Explain how airline overbooking works",
+            "Are there compensation options for overbooked flights?",
+            "Why do airlines overbook flights?"
+        ],
+        "responses": [
+            "Airlines sometimes overbook flights to account for no-show passengers, but this can result in passengers being bumped if everyone shows up. In case of overbooking, airlines may ask for volunteers to give up their seats in exchange for compensation, such as travel vouchers or cash. If no one volunteers, some passengers may be involuntarily denied boarding and will be compensated according to airline policies and local regulations. If you are involuntarily bumped, the airline must rebook you on the next available flight."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_inflight_wifi",
+        "patterns": [
+            "Is there Wi-Fi on the plane?",
+            "How does inflight Wi-Fi work?",
+            "Can I use the internet during a flight?",
+            "Explain airline Wi-Fi services",
+            "Are there fees for Wi-Fi on flights?"
+        ],
+        "responses": [
+            "Many airlines offer in-flight Wi-Fi, which allows passengers to access the internet during the flight. The quality and availability of the service can vary depending on the airline, aircraft type, and flight route. Some airlines provide free Wi-Fi for messaging services, while others charge a fee based on data usage or duration. It’s advisable to check with the airline for the specific Wi-Fi policy on your flight and to be aware that internet speeds may be slower than on the ground."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_inflight_medical_emergencies",
+        "patterns": [
+            "What happens if someone gets sick on a flight?",
+            "Do airlines have medical emergency procedures?",
+            "Explain airline procedures for medical issues",
+            "Is there a doctor on board during flights?",
+            "How do airlines handle health emergencies?"
+        ],
+        "responses": [
+            "Airlines are prepared to handle medical emergencies with basic first aid supplies and crew members trained in first aid and CPR. In some cases, an automated external defibrillator (AED) is available on board. If a serious medical issue arises, the crew may seek assistance from medically trained passengers or consult a ground-based medical professional via radio communication. If necessary, the flight may be diverted to the nearest airport for medical assistance. It is recommended for passengers with medical conditions to carry their own medication and inform the airline ahead of time."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_food_allergy_policies",
+        "patterns": [
+            "How do airlines handle food allergies?",
+            "Can I request a special meal if I have allergies?",
+            "Are peanuts served on flights?",
+            "Explain airline policies for food allergies",
+            "What should I do if I have a food allergy?"
+        ],
+        "responses": [
+            "If you have a food allergy, you should inform the airline in advance. Some airlines offer allergen-free meal options, but they may not guarantee a completely allergen-free environment. For passengers with severe allergies, it is advisable to bring your own food. Many airlines no longer serve peanuts or have implemented policies to minimize exposure to allergens. It is also recommended to carry any necessary medications, such as an EpiPen, and notify the cabin crew about your allergy."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_inflight_seat_reclining",
+        "patterns": [
+            "Can I recline my seat during a flight?",
+            "Is it okay to recline my seat?",
+            "Explain seat reclining etiquette on airplanes",
+            "Are there restrictions on reclining seats?",
+            "When is it appropriate to recline a seat?"
+        ],
+        "responses": [
+            "While most airline seats are designed to recline, it’s generally considered polite to check with the person behind you before reclining, especially during meal times. On shorter flights or in economy class, there may be limited space, so a slight recline is often more considerate. Some airlines restrict seat reclining during takeoff, landing, or meal service. Being mindful of the timing and other passengers' comfort can make the journey more pleasant for everyone."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_jetlag_tips",
+        "patterns": [
+            "How can I reduce jetlag?",
+            "Do airlines have tips for dealing with jetlag?",
+            "What are the best ways to avoid jetlag?",
+            "Explain how to minimize jetlag effects",
+            "What can I do to recover from jetlag faster?"
+        ],
+        "responses": [
+            "To reduce jetlag, try to adjust your sleep schedule to match your destination's time zone a few days before departure. Staying hydrated and avoiding caffeine or alcohol during the flight can also help. Upon arrival, spend time outdoors in natural sunlight to help reset your internal clock. Short naps can be beneficial, but avoid sleeping for long periods during the day. Regular meals and exercise may also help you recover from jetlag more quickly."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_seat_selection",
+        "patterns": [
+            "How do I choose my seat on a flight?",
+            "Can I select my seat before flying?",
+            "What is the best seat on a plane?",
+            "Explain seat selection policies for airlines",
+            "Do I have to pay for seat selection?"
+        ],
+        "responses": [
+            "Most airlines allow you to choose your seat during the booking process or after purchasing your ticket, although fees may apply depending on your fare type. Some seats, like those with extra legroom or near emergency exits, may cost more. If you don't select a seat in advance, one will be assigned to you at check-in. Early seat selection can help ensure you get your preferred spot, whether it's a window seat, aisle seat, or near the front of the plane."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_travel_with_children",
+        "patterns": [
+            "Can I bring a stroller on the plane?",
+            "Do children need their own seat on flights?",
+            "What are the airline policies for traveling with kids?",
+            "Explain flying with children procedures",
+            "Are there special services for infants on airplanes?"
+        ],
+        "responses": [
+            "Airlines typically allow parents to bring strollers and car seats when traveling with young children. Infants can often travel on an adult's lap, but some airlines may require a ticket for the child. Many airlines provide bassinets on long-haul flights for infants. It's advisable to check the airline's policies on children's fares, stroller checking, and whether an infant-specific meal can be arranged in advance. Traveling with children's essentials like snacks, toys, and diapers is also recommended."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_baggage_handling",
+        "patterns": [
+            "What happens if my baggage is lost?",
+            "Can I track my checked luggage?",
+            "How does airline baggage handling work?",
+            "Explain baggage policies for airlines",
+            "Is there compensation for delayed luggage?"
+        ],
+        "responses": [
+            "If your baggage is delayed or lost, report it to the airline immediately upon arrival at the baggage claim. Airlines typically have tracking systems to help locate your luggage and deliver it to your destination. Compensation may be available for delayed or lost baggage, depending on the airline's policies and your travel insurance. Be sure to keep receipts for any essential items you need to purchase while waiting for your luggage. Most airlines also have limits on compensation amounts for lost items."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_cancellation_policies",
+        "patterns": [
+            "Can I cancel my flight?",
+            "What are airline cancellation policies?",
+            "How do I get a refund if I cancel?",
+            "Explain airline cancellation fees",
+            "Are there flexible cancellation options for flights?"
+        ],
+        "responses": [
+            "Cancellation policies vary by airline and ticket type. Some airlines offer refundable tickets that allow free cancellations, while others may charge a fee or offer credit for future travel. During certain situations, such as emergencies or health-related issues, airlines may waive cancellation fees. Be sure to check the fare conditions of your ticket to understand the airline's cancellation policy. Booking flexible fares or adding travel insurance can provide more options for cancellations or changes."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_seat_upgrade",
+        "patterns": [
+            "How can I upgrade my seat?",
+            "Can I get a seat upgrade at the airport?",
+            "Explain seat upgrade options on flights",
+            "Do frequent flyer members get upgrades?",
+            "What are the costs for upgrading a seat?"
+        ],
+        "responses": [
+            "Seat upgrades to premium economy, business, or first class may be available for purchase before the flight or during check-in. Frequent flyer members with elite status may be eligible for complimentary or discounted upgrades, especially when flights are not fully booked. Some airlines offer bid-for-upgrade programs, where passengers can make an offer for an upgraded seat. The cost of upgrades varies depending on the airline, route, and availability."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_entertainment_options",
+        "patterns": [
+            "What entertainment is available on flights?",
+            "Do airlines have in-flight movies?",
+            "Explain airline entertainment services",
+            "Are there games to play during a flight?",
+            "Can I use my own device for entertainment on planes?"
+        ],
+        "responses": [
+            "Many airlines offer in-flight entertainment, including movies, TV shows, music, and games, through seatback screens or personal devices. Some airlines provide complimentary entertainment, while others may charge for access. You can often use your own device to connect to the airline's entertainment system via a dedicated app or web portal. Bringing your own headphones or earphones can also enhance the experience. Long-haul flights typically have a wider variety of options compared to short domestic routes."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_amenities_by_class",
+        "patterns": [
+            "What are the amenities in business class?",
+            "Is there a difference in amenities between economy and first class?",
+            "Explain the amenities offered by airlines",
+            "Are blankets and pillows provided during flights?",
+            "Do airlines give free snacks to all passengers?"
+        ],
+        "responses": [
+            "Airline amenities vary by class of service. In economy class, passengers usually receive basic amenities such as blankets, pillows, and snacks, while business and first-class passengers enjoy additional perks like lie-flat seats, premium meals, and luxury amenity kits. Some airlines also offer enhanced entertainment systems and access to exclusive lounges. The level of service can differ significantly between short-haul and long-haul flights, with international flights typically offering more comprehensive amenities."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_check_in_options",
+        "patterns": [
+            "How do I check in for my flight?",
+            "Can I check in online?",
+            "Explain the check-in process for flights",
+            "Is mobile check-in available?",
+            "When should I arrive for check-in at the airport?"
+        ],
+        "responses": [
+            "Airlines typically offer several check-in options: online, mobile, airport kiosk, or traditional counter service. Online and mobile check-in usually open 24 to 48 hours before departure, allowing you to select your seat and download a digital boarding pass. Airport kiosks offer a quick way to check in and print your boarding pass, while counter check-in is best for travelers with special requests or baggage issues. It's recommended to arrive at the airport at least 2 hours before domestic flights and 3 hours before international flights."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_loyalty_program_tiers",
+        "patterns": [
+            "What are the levels of airline loyalty programs?",
+            "How do I reach elite status in a frequent flyer program?",
+            "Explain loyalty program tiers for airlines",
+            "Are there benefits for different loyalty levels?",
+            "How many miles do I need to reach gold status?"
+        ],
+        "responses": [
+            "Airline loyalty programs typically have multiple tiers, such as Silver, Gold, and Platinum. Each tier offers different benefits, such as bonus miles, priority boarding, free checked baggage, and lounge access. To reach a higher tier, you'll need to accumulate a certain number of miles, segments, or spending within a specific time frame, usually a calendar year. Higher tiers offer more perks and rewards, encouraging frequent travelers to remain loyal to the airline."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_electronic_devices_policies",
+        "patterns": [
+            "Can I use my phone during a flight?",
+            "Are laptops allowed on planes?",
+            "Explain airline policies for electronic devices",
+            "Can I use Bluetooth headphones on a flight?",
+            "Are there restrictions on using electronic devices?"
+        ],
+        "responses": [
+            "Airlines generally allow the use of electronic devices such as smartphones, tablets, and laptops in airplane mode. Wi-Fi services may be available during the flight, allowing for internet use. Bluetooth devices like headphones are typically permitted, but some airlines may restrict their use during takeoff and landing. Larger electronic items, such as laptops, must be stowed during these phases of the flight for safety reasons. Always follow the crew's instructions regarding device usage."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_in_flight_meals",
+        "patterns": [
+            "Are meals served on flights?",
+            "Can I order special meals on planes?",
+            "Explain airline meal services",
+            "Do airlines provide vegetarian options?",
+            "Is there food available on short flights?"
+        ],
+        "responses": [
+            "In-flight meal availability depends on the airline, flight duration, and class of service. Long-haul and international flights typically offer meal services, including options for dietary restrictions like vegetarian, vegan, or gluten-free. For short domestic flights, meals may not be included, but snacks and drinks might be available for purchase. Special meals can often be requested in advance through the airline's website or customer service. It's always best to check with the airline before your flight to understand meal options."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_special_assistance",
+        "patterns": [
+            "How do I request assistance at the airport?",
+            "Can airlines help with wheelchair access?",
+            "Explain special assistance options for passengers",
+            "Is there help for visually impaired travelers?",
+            "What services are available for elderly passengers?"
+        ],
+        "responses": [
+            "Airlines offer special assistance services for passengers with reduced mobility, disabilities, or special needs. This can include wheelchair assistance, help for visually or hearing-impaired travelers, and priority boarding. Requests for assistance should be made during booking or at least 48 hours before departure. Airports also have dedicated staff to help with navigating terminals, boarding, and baggage. Elderly passengers or those requiring extra time or support should inform the airline ahead of time for a smoother travel experience."
+        ],
+        "context_set": ""
+    },
+    {
+        "tag": "airline_pet_travel_policies",
+        "patterns": [
+            "Can I bring my dog on the plane?",
+            "What are the rules for traveling with pets?",
+            "Explain pet policies for airlines",
+            "Do airlines allow cats in the cabin?",
+            "Are there restrictions on traveling with animals?"
+        ],
+        "responses": [
+            "Airlines have specific policies regarding pet travel, which vary by carrier. Small pets, such as dogs and cats, are usually allowed to travel in the cabin as long as they fit in a carrier under the seat. Larger animals may need to travel as checked baggage or cargo. Each airline has requirements for pet vaccinations, carrier size, and travel fees. It's important to notify the airline in advance if you plan to travel with a pet to ensure compliance with their guidelines."
+        ],
+        "context_set": ""
+    }
+    
+    ]
+}
